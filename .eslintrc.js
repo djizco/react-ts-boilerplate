@@ -23,7 +23,6 @@ module.exports = {
       'Property': true,
       'VariableDeclarator': true
     }}],
-    'react/jsx-filename-extension': [2, { 'extensions': ['.js', '.jsx','.tsx'] }],
     'react/jsx-fragments': [2, 'element'],
 
     // disable rules

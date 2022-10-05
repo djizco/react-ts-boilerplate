@@ -21,16 +21,6 @@ const CreateHtmlWebpackPluginConfig = ({ filename }) => new HtmlWebpackPlugin({
   filename,
 });
 
-const cssLoaderConfig = {
-  loader: 'css-loader',
-  options: {
-    modules: {
-      mode: 'local',
-      localIdentName: '[folder]-[local]--[hash:base64:5]',
-    },
-  },
-};
-
 module.exports = {
   devServer: {
     static: {
@@ -69,17 +59,30 @@ module.exports = {
         include: [resolve('client')],
       },
       {
-        test: /\.css$/,
+        test: /\.module.css$/,
         use: [
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          cssLoaderConfig,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                mode: 'local',
+                localIdentName: '[folder]-[local]--[hash:base64:5]',
+              },
+            },
+          },
         ],
+      },
+      {
+        test: /\.css$/,
+        use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
+        exclude: /\.module\.css$/,
       },
       {
         test: /\.scss$/,
         use: [
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          cssLoaderConfig,
+          'css-loader',
           'sass-loader',
         ],
       },
@@ -87,7 +90,7 @@ module.exports = {
         test: /\.less$/,
         use: [
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          cssLoaderConfig,
+          'css-loader',
           'less-loader',
         ],
       },
