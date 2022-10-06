@@ -22,8 +22,8 @@ module.exports = {
       Property: true,
       VariableDeclarator: true,
     } }],
-    'react/jsx-fragments': [2, 'element'],
     'quote-props': [2, 'consistent-as-needed'],
+    'react/jsx-fragments': [2, 'element'],
 
     // disable rules
     'arrow-parens': 0,

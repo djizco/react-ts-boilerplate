@@ -45,6 +45,8 @@ npm run deploy
 
 ```bash
 npm test
+npm run test:verbose
+npm run test:coverage
 npm run test:watch
 npm run lint
 npm run lint:fix
