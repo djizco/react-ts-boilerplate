@@ -3,7 +3,11 @@ const path = require('path');
 module.exports = {
   collectCoverageFrom: [
     'client/components/**/*.{js,jsx,ts,tsx}',
+    'client/store/actions/**/*.{js,jsx,ts,tsx}',
+    'client/store/reducers/**/*.{js,jsx,ts,tsx}',
+    'client/utils/**/*.{js,jsx,ts,tsx}',
     '!client/**/*.d.ts',
+    '!client/components/environment/**/*.{js,jsx,ts,tsx}',
   ],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules'],

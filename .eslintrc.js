@@ -26,6 +26,7 @@ module.exports = {
     'react/jsx-fragments': [2, 'element'],
 
     // disable rules
+    '@typescript-eslint/default-param-last': 0,
     'arrow-parens': 0,
     'default-param-last': 0,
     'function-paren-newline': 0,

@@ -1,2 +1,12 @@
 @import 'bulma-config';
 @import '~bulma';
+@import 'variables';
+
+@import 'modifiers';
+@import 'general';
+@import 'navigation';
+@import 'footer';
+
+@import 'home';
+@import 'counter';
+@import 'todo';
