@@ -1,12 +1,12 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 
 import Button from 'react-bulma-companion/lib/Button';
 
+import { useAppDispatch } from '_store/hooks';
 import { increment } from '_store/actions/counter';
 
 export default function IncrementButton() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleIncrement = () => dispatch(increment());
 

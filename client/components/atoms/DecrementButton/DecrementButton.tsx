@@ -1,12 +1,12 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 
 import Button from 'react-bulma-companion/lib/Button';
 
+import { useAppDispatch } from '_store/hooks';
 import { decrement } from '_store/actions/counter';
 
 export default function DecrementButton() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleDecrement = () => dispatch(decrement());
 

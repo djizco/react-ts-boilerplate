@@ -18,7 +18,10 @@
     "paths": {
       "_client/*": ["client/*"],
       "_components/*": ["client/components/*"],
-      "_store/*": ["client/store/*"]
+      "_store/*": ["client/store/*"],
+      "_styles/*": ["client/styles/*"],
+      "_hooks/*": ["client/hooks/*"],
+      "_utils/*": ["client/utils/*"]
     }
   },
   "include": ["client", "config", ".eslintrc.js"]

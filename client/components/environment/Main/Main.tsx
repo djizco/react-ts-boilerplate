@@ -7,6 +7,7 @@ import Footer from '_components/organisms/Footer';
 
 import HomePage from '_components/pages/HomePage';
 import CounterPage from '_components/pages/CounterPage';
+import TodoPage from '_components/pages/TodoPage';
 import LostPage from '_components/pages/LostPage';
 
 interface MainProps {
@@ -29,6 +30,7 @@ export default function Main({ classes }: MainProps) {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/counter" element={<CounterPage />} />
+          <Route path="/todo" element={<TodoPage />} />
           <Route path="*" element={<LostPage />} />
         </Routes>
       </div>

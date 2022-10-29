@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import R from 'ramda';
 
 import Columns from 'react-bulma-companion/lib/Columns';
@@ -7,11 +6,13 @@ import Column from 'react-bulma-companion/lib/Column';
 import Section from 'react-bulma-companion/lib/Section';
 import Title from 'react-bulma-companion/lib/Title';
 
+import { useAppSelector } from '_store/hooks';
+
 import IncrementButton from '_components/atoms/IncrementButton';
 import DecrementButton from '_components/atoms/DecrementButton';
 
 export default function CounterPage() {
-  const { counter } = useSelector(R.pick(['counter']));
+  const { counter } = useAppSelector(R.pick(['counter']));
 
   return (
     <div className="counter-page">

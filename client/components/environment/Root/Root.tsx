@@ -23,7 +23,7 @@ export default function Root({ history, store }: RootProps) {
 
   useEffect(() => {
     const reduxPersistOptions = {
-      whitelist: ['counter', 'todo'],
+      whitelist: ['counter', 'todos'],
       keyPrefix: '',
     };
 

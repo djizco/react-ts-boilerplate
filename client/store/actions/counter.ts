@@ -1,4 +1,4 @@
-import { CounterAction } from '_store/reducers/counter';
+import type { CounterAction } from '_store/reducers/counter';
 
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
