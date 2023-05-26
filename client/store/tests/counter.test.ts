@@ -5,7 +5,7 @@ describe('Counter Reducer:', () => {
   const initialState = 3;
 
   test('Is 0 by default', () => {
-    expect(reducer(undefined, {})).toEqual(0);
+    expect(reducer(undefined, { type: '' })).toEqual(0);
   });
 
   test('Increment', () => {

@@ -1,4 +1,4 @@
-import { capitalize } from './strings';
+import { capitalize } from '../strings';
 
 describe('Capitalize:', () => {
   it('should capitalize a string', () => {

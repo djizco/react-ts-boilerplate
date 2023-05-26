@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import PropTypes from 'prop-types';
 import { formatDistanceToNow } from 'date-fns';
 
@@ -54,7 +54,7 @@ export default function Todo({ id, createdAt, updatedAt, completed, text }: Todo
 
   const openModal = () => setConfirm(true);
   const closeModal = () => setConfirm(false);
-  const updateText = e => setCurrentText(e.target.value);
+  const updateText = (e: ChangeEvent<HTMLTextAreaElement>) => setCurrentText(e.target.value);
   const editTodo = () => setEdit(true);
 
   const cancelEdit = () => {

@@ -1,7 +1,7 @@
-const styles = () => ({
-  root: {
-    textAlign: 'center',
-  },
-});
+import { makeStyles } from 'tss-react/mui';
+
+const styles = () => ({}) as const;
 
 export default styles;
+
+export const useStyles = makeStyles()(styles);

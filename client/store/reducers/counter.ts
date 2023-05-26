@@ -1,11 +1,7 @@
 import R from 'ramda';
-import { INCREMENT, DECREMENT } from '_store/actions/counter';
+import { CounterAction, INCREMENT, DECREMENT } from '_store/actions/counter';
 
 export type CounterState = number;
-
-export interface CounterAction {
-  type?: string,
-}
 
 export default function counter(state: CounterState = 0, action: CounterAction) {
   switch (action.type) {

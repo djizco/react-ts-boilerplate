@@ -16,11 +16,13 @@ export default function TodoPage() {
           Todo List:
         </Title>
         <Columns>
+          {/* @ts-ignore */}
           <Column size="8" offset="2">
             <AddTodo />
           </Column>
         </Columns>
         <Columns>
+          {/* @ts-ignore */}
           <Column size="8" offset="2">
             <TodoList />
           </Column>

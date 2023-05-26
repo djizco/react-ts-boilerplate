@@ -5,7 +5,17 @@ import Modal from 'react-bulma-companion/lib/Modal';
 
 import ConfirmDeleteTodo from '_components/organisms/ConfirmDeleteTodo';
 
-export default function ConfirmModal({ confirm, closeModal, deleteTodo }) {
+export interface ConfirmModalProps {
+  confirm: boolean;
+  closeModal: () => void;
+  deleteTodo: () => void;
+}
+
+export default function ConfirmModal({
+  confirm,
+  closeModal,
+  deleteTodo,
+}: ConfirmModalProps) {
   return (
     <Modal className="confirm-modal" active={confirm}>
       <Modal.Background />

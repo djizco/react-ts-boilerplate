@@ -8,10 +8,12 @@ import Lostpage from './index';
 
 describe('Lostpage Component:', () => {
   it('renders the lost page', async () => {
-    render(
+    const { getByText } = render(
       <Provider store={store}>
         <Lostpage />
       </Provider>,
     );
+
+    expect(getByText('The page you requested does not exist.')).toBeInTheDocument();
   });
 });

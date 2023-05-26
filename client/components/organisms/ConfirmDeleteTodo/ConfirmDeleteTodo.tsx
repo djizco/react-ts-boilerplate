@@ -4,12 +4,20 @@ import PropTypes from 'prop-types';
 import Card from 'react-bulma-companion/lib/Card';
 import Content from 'react-bulma-companion/lib/Content';
 
-export default function ConfirmDeleteTodo({ closeModal, deleteTodo }) {
+export interface ConfirmDeleteTodoProps {
+  closeModal: () => void;
+  deleteTodo: () => void;
+}
+
+export default function ConfirmDeleteTodo({
+  closeModal,
+  deleteTodo,
+}: ConfirmDeleteTodoProps) {
   return (
     <Card>
       <Card.Content>
-        <Content className="has-text-centered">
-          Are you sure you wanted to delete this item?
+        <Content textAlign="center">
+          Are you sure you want to delete this item?
         </Content>
       </Card.Content>
       <Card.Footer>

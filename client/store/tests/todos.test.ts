@@ -2,7 +2,7 @@ import { addTodo, toggleCompleteTodo, updateTodo, deleteTodo } from '_store/acti
 import reducer from '_store/reducers/todos';
 
 describe('Todos Reducer:', () => {
-  let state = reducer(undefined, {});
+  let state = reducer(undefined, { type: '', payload: {} });
 
   test('Is an empty array by default', () => {
     expect(state.list).toEqual(expect.any(Array));

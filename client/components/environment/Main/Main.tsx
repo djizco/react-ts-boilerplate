@@ -1,5 +1,4 @@
 import React, { useEffect, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from '_components/organisms/Navbar';
@@ -10,14 +9,11 @@ import CounterPage from '_components/pages/CounterPage';
 import TodoPage from '_components/pages/TodoPage';
 import LostPage from '_components/pages/LostPage';
 
-interface MainProps {
-  classes: {
-    root: string,
-  }
-}
+import { useStyles } from './styles';
 
-export default function Main({ classes }: MainProps) {
+export default function Main() {
   const { pathname } = useLocation();
+  const { classes } = useStyles();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,9 +34,3 @@ export default function Main({ classes }: MainProps) {
     </Fragment>
   );
 }
-
-Main.propTypes = {
-  classes: PropTypes.shape({
-    root: PropTypes.string.isRequired,
-  }).isRequired,
-};

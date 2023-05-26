@@ -1,26 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+import Typography from '@mui/material/Typography';
+
+import Element from 'react-bulma-companion/lib/Element';
 import Section from 'react-bulma-companion/lib/Section';
 import Title from 'react-bulma-companion/lib/Title';
 
-export default function LostPage({ classes }) {
+export default function LostPage() {
   return (
-    <div className={classes.root}>
+    <Element textAlign="center">
       <Section className="is-full-page">
         <Title className="app-title" size="1">
           404
         </Title>
-        <p>
+        <Typography>
           The page you requested does not exist.
-        </p>
+        </Typography>
       </Section>
-    </div>
+    </Element>
   );
 }
-
-LostPage.propTypes = {
-  classes: PropTypes.shape({
-    root: PropTypes.string.isRequired,
-  }).isRequired,
-};

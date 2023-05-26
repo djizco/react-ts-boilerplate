@@ -1,11 +1,11 @@
 import update from 'immutability-helper';
-import R from 'ramda';
+import * as R from 'ramda';
 
 import {
-  ADD_TODO, TOGGLE_COMPLETE_TODO, UPDATE_TODO, DELETE_TODO, INCREMENT_TODO_ID,
+  ADD_TODO, TOGGLE_COMPLETE_TODO, UPDATE_TODO, DELETE_TODO, INCREMENT_TODO_ID, TodosAction,
 } from '_store/actions/todos';
 
-export interface TodoState {
+export interface Todo {
   readonly id: number,
   readonly createdAt: number,
   updatedAt?: number,
@@ -13,28 +13,20 @@ export interface TodoState {
   text: string,
 }
 
-export interface TodosState {
+export interface Todos {
   nextTodoId: number,
-  list: TodoState[],
-}
-
-export interface TodosAction {
-  type?: string,
-  id?: number,
-  text?: string,
-  createdAt?: number,
-  updatedAt?: number,
+  list: Todo[],
 }
 
 const initialTodo = { completed: false, id: 0, text: '', createdAt: Date.now() };
 
-export function todo(state: TodoState = initialTodo, action: TodosAction) {
+export function todo(state: Todo = initialTodo, action: TodosAction) {
   switch (action.type) {
     case ADD_TODO:
       return update(state, {
-        id: { $set: action.id || 0 },
-        text: { $set: action.text || '' },
-        createdAt: { $set: action.createdAt || 0 },
+        id: { $set: action.payload?.id || 0 },
+        text: { $set: action.payload?.text || '' },
+        createdAt: { $set: action.payload?.createdAt || 0 },
       });
     case TOGGLE_COMPLETE_TODO:
       return update(state, {
@@ -42,16 +34,16 @@ export function todo(state: TodoState = initialTodo, action: TodosAction) {
       });
     case UPDATE_TODO:
       return update(state, {
-        text: { $set: action.text || '' },
-        updatedAt: { $set: action.updatedAt },
+        text: { $set: action.payload?.text || '' },
+        updatedAt: { $set: action.payload?.updatedAt },
       });
     default:
       return state;
   }
 }
 
-export default function todos(state: TodosState = { nextTodoId: 1, list: [] }, action: TodosAction) {
-  const index: number = R.findIndex(R.propEq('id', action.id), state.list);
+export default function todos(state: Todos = { nextTodoId: 1, list: [] }, action: TodosAction) {
+  const index: number = R.findIndex(R.propEq(action.payload?.id, 'id'), state.list);
 
   switch (action.type) {
     case INCREMENT_TODO_ID:

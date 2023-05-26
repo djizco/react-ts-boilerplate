@@ -4,9 +4,9 @@
   "description": "React Typescript Boilerplate",
   "main": "client/index.js",
   "scripts": {
+    "dev": "./scripts/dev.sh",
     "build": "./scripts/build.sh",
-    "start": "./scripts/start.sh",
-    "serve": "serve -s dist -p 3000",
+    "start": "serve -s dist -p 3000",
     "deploy": "surge dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -60,11 +60,6 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.2",
-    "@types/jest": "^29.5.1",
-    "@types/ramda": "^0.29.1",
-    "@types/react": "^18.2.7",
-    "@types/react-dom": "^18.2.4",
-    "@types/redux-logger": "^3.0.9",
     "bulma": "0.9.4",
     "core-js": "^3.30.2",
     "date-fns": "^2.30.0",
@@ -85,7 +80,6 @@
     "regenerator-runtime": "^0.13.11",
     "terser-webpack-plugin": "^5.3.9",
     "tss-react": "^4.8.4",
-    "typescript": "^5.0.4",
     "webpack": "^5.84.1",
     "webpack-bundle-analyzer": "^4.8.0",
     "webpack-cli": "^5.1.1",
@@ -99,6 +93,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.1",
+    "@types/ramda": "^0.29.1",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "@types/redux-logger": "^3.0.9",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
     "babel-loader": "^9.1.2",
@@ -122,6 +121,7 @@
     "pre-commit": "^1.2.2",
     "sass": "^1.62.1",
     "sass-loader": "^13.3.0",
-    "style-loader": "^3.3.3"
+    "style-loader": "^3.3.3",
+    "typescript": "^5.0.4"
   }
 }

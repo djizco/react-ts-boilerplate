@@ -35,6 +35,7 @@ export default function NavbarComponent() {
             </Title>
           </Navbar.Item>
           <Navbar.Item to="/" className="is-hidden-desktop" onClick={deactivate} component={Link}>
+            {/* @ts-ignore */}
             <Icon size="medium">
               <FontAwesomeIcon icon={faHome} size="lg" />
             </Icon>
