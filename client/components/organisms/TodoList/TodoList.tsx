@@ -6,7 +6,7 @@ import { useAppSelector } from '_store/hooks';
 import Todo from '_components/molecules/Todo';
 
 export default function TodoList() {
-  const { todos } = useAppSelector(R.pick(['todos']));
+  const todos = useAppSelector(state => state.todos);
 
   return (
     <ul className="todo-list">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -8,7 +8,5 @@ import { store, history } from '_store/index';
 
 import Root from '_components/environment/Root';
 
-render(
-  <Root store={store} history={history} />,
-  document.getElementById('app'),
-);
+createRoot(document.getElementById('app')!)
+  .render(<Root history={history} store={store} />);
