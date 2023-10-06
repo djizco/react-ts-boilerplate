@@ -9,7 +9,7 @@ import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 
 import Main from '_components/environment/Main';
 
-import theme from '_client/styles/js/theme';
+import theme from '_client/styles/ts/theme';
 
 export interface RootProps {
   history: History,
