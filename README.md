@@ -85,9 +85,6 @@ You can now start updating files in your client to begin working on your own pro
     - images
     - icons
   - components
-    - atoms
-    - molecules
-    - organisms
     - pages
     - environment
   - hooks
@@ -100,12 +97,6 @@ You can now start updating files in your client to begin working on your own pro
   - utils
 
 ```
-
-Component Heirarchy:
-
-Environment > Pages > Organisms > Molecules > Atoms
-
-This is based on atomic design. Learn more about [atomic design](http://bradfrost.com/blog/post/atomic-web-design/).
 
 ## Technologies
 
@@ -120,6 +111,8 @@ This is based on atomic design. Learn more about [atomic design](http://bradfros
 [Redux-Persist](https://github.com/rt2zz/redux-persist) - Persistent State
 
 [Webpack](https://webpack.github.io/) - Module Bundler
+
+[Material-UI](http://material-ui.com/) - React Component Library
 
 [Bulma](http://bulma.io/) - CSS Framework
 
