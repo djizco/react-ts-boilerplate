@@ -7,8 +7,8 @@ import Title from 'react-bulma-companion/lib/Title';
 
 import { useAppSelector } from '_store/hooks';
 
-import IncrementButton from '_components/atoms/IncrementButton';
-import DecrementButton from '_components/atoms/DecrementButton';
+import IncrementButton from './IncrementButton';
+import DecrementButton from './DecrementButton';
 
 export default function CounterPage() {
   const counter = useAppSelector(state => state.counter);

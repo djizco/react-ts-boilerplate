@@ -17,9 +17,10 @@ import Icon from 'react-bulma-companion/lib/Icon';
 import Textarea from 'react-bulma-companion/lib/Textarea';
 import Level from 'react-bulma-companion/lib/Level';
 
+import DeleteModal from '_components/library/DeleteModal';
+
 import { useAppDispatch } from '_store/hooks';
 import { toggleCompleteTodo, updateTodo, deleteTodo } from '_store/actions/todos';
-import ConfirmModal from '_components/organisms/ConfirmModal';
 
 const fromNow = (date: number) => formatDistanceToNow(date, { addSuffix: true });
 
@@ -128,8 +129,8 @@ export default function Todo({ id, createdAt, updatedAt, completed, text }: Todo
           </Level>
         </Media.Content>
       </Media>
-      <ConfirmModal
-        confirm={confirm}
+      <DeleteModal
+        active={confirm}
         closeModal={closeModal}
         deleteTodo={handleDeleteTodo}
       />

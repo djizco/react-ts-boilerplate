@@ -3,7 +3,7 @@ import R from 'ramda';
 
 import { useAppSelector } from '_store/hooks';
 
-import Todo from '_components/molecules/Todo';
+import Todo from '../Todo';
 
 export default function TodoList() {
   const todos = useAppSelector(state => state.todos);
