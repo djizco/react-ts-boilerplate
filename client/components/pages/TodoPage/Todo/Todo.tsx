@@ -1,26 +1,25 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import PropTypes from 'prop-types';
+import React, { ChangeEvent, useEffect, useState } from 'react';
+
 import { formatDistanceToNow } from 'date-fns';
+import PropTypes from 'prop-types';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons/faTrashCan';
-import { faBan } from '@fortawesome/free-solid-svg-icons/faBan';
-import { faPencil } from '@fortawesome/free-solid-svg-icons/faPencil';
-import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons/faFloppyDisk';
 import { faSquare } from '@fortawesome/free-regular-svg-icons/faSquare';
 import { faSquareCheck } from '@fortawesome/free-regular-svg-icons/faSquareCheck';
-
-import Media from 'react-bulma-companion/lib/Media';
+import { faBan } from '@fortawesome/free-solid-svg-icons/faBan';
+import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons/faFloppyDisk';
+import { faPencil } from '@fortawesome/free-solid-svg-icons/faPencil';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons/faTrashCan';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Content from 'react-bulma-companion/lib/Content';
 import Icon from 'react-bulma-companion/lib/Icon';
-import Textarea from 'react-bulma-companion/lib/Textarea';
 import Level from 'react-bulma-companion/lib/Level';
+import Media from 'react-bulma-companion/lib/Media';
+import Textarea from 'react-bulma-companion/lib/Textarea';
 
 import DeleteModal from '_components/library/DeleteModal';
 
+import { deleteTodo, toggleCompleteTodo, updateTodo } from '_store/actions/todos';
 import { useAppDispatch } from '_store/hooks';
-import { toggleCompleteTodo, updateTodo, deleteTodo } from '_store/actions/todos';
 
 const fromNow = (date: number) => formatDistanceToNow(date, { addSuffix: true });
 

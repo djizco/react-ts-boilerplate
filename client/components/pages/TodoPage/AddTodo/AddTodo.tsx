@@ -1,13 +1,14 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
-import Columns from 'react-bulma-companion/lib/Columns';
-import Column from 'react-bulma-companion/lib/Column';
 import Button from 'react-bulma-companion/lib/Button';
+import Column from 'react-bulma-companion/lib/Column';
+import Columns from 'react-bulma-companion/lib/Columns';
 import Input from 'react-bulma-companion/lib/Input';
 
-import useKeyPress from '_hooks/useKeyPress';
 import { useAppDispatch } from '_store/hooks';
 import { addTodoAndIncrementId } from '_store/thunks/todos';
+
+import useKeyPress from '_hooks/useKeyPress';
 
 export default function AddTodo() {
   const dispatch = useAppDispatch();

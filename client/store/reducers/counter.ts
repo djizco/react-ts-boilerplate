@@ -1,5 +1,6 @@
 import R from 'ramda';
-import { CounterAction, INCREMENT, DECREMENT } from '_store/actions/counter';
+
+import { CounterAction, DECREMENT, INCREMENT } from '_store/actions/counter';
 
 export type CounterState = number;
 

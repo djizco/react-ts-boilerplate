@@ -2,7 +2,7 @@ import update from 'immutability-helper';
 import * as R from 'ramda';
 
 import {
-  ADD_TODO, TOGGLE_COMPLETE_TODO, UPDATE_TODO, DELETE_TODO, INCREMENT_TODO_ID, TodosAction,
+  ADD_TODO, DELETE_TODO, INCREMENT_TODO_ID, TodosAction, TOGGLE_COMPLETE_TODO, UPDATE_TODO,
 } from '_store/actions/todos';
 
 export interface Todo {

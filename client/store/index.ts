@@ -1,9 +1,9 @@
-import { createStore, applyMiddleware, compose, Middleware, Action, AnyAction } from 'redux';
 import { createBrowserHistory } from 'history';
+import { Action, AnyAction, applyMiddleware, compose, createStore, Middleware } from 'redux';
 import { createReduxHistoryContext } from 'redux-first-history';
 import { createLogger } from 'redux-logger';
-import thunk, { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { autoRehydrate } from 'redux-persist';
+import thunk, { ThunkAction, ThunkDispatch } from 'redux-thunk';
 
 import createRootReducer from './reducers';
 

@@ -18,6 +18,7 @@ module.exports = {
     '^_styles(.*)$': '<rootDir>/client/styles/$1',
     '^_hooks(.*)$': '<rootDir>/client/hooks/$1',
     '^_utils(.*)$': '<rootDir>/client/utils/$1',
+    '^_types(.*)$': '<rootDir>/client/types/$1',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
   },
   rootDir: path.join(__dirname, '..'),

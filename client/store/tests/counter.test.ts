@@ -1,4 +1,4 @@
-import { increment, decrement } from '_store/actions/counter';
+import { decrement, increment } from '_store/actions/counter';
 import reducer from '_store/reducers/counter';
 
 describe('Counter Reducer:', () => {

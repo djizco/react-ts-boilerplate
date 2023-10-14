@@ -1,7 +1,8 @@
-const webpack = require('webpack');
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 const resolve = dir => path.join(__dirname, '../', dir);
 
@@ -51,6 +52,7 @@ module.exports = {
       _styles: resolve('client/styles'),
       _hooks: resolve('client/hooks'),
       _utils: resolve('client/utils'),
+      _types: resolve('client/types'),
     },
     extensions: ['.js', 'jsx', '.ts', '.tsx'],
   },
