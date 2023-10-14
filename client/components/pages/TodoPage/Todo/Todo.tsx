@@ -32,7 +32,13 @@ interface TodoProps {
   updatedAt?: number,
 }
 
-export default function Todo({ id, createdAt, updatedAt, completed, text }: TodoProps) {
+export default function Todo({
+  id,
+  createdAt,
+  updatedAt,
+  completed,
+  text,
+}: TodoProps) {
   const dispatch = useAppDispatch();
 
   const [currentText, setCurrentText] = useState(text);

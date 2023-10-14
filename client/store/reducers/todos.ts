@@ -18,7 +18,12 @@ export interface Todos {
   list: Todo[],
 }
 
-const initialTodo = { completed: false, id: 0, text: '', createdAt: Date.now() };
+const initialTodo = {
+  completed: false,
+  id: 0,
+  text: '',
+  createdAt: Date.now(),
+};
 
 export function todo(state: Todo = initialTodo, action: TodosAction) {
   switch (action.type) {
