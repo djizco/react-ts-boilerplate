@@ -10,6 +10,7 @@ import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons/faFloppyDisk';
 import { faPencil } from '@fortawesome/free-solid-svg-icons/faPencil';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons/faTrashCan';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Content from 'react-bulma-companion/lib/Content';
 import Icon from 'react-bulma-companion/lib/Icon';
 import Level from 'react-bulma-companion/lib/Level';

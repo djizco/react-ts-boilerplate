@@ -6,6 +6,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
 import { faHome } from '@fortawesome/free-solid-svg-icons/faHome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Button from 'react-bulma-companion/lib/Button';
 import Container from 'react-bulma-companion/lib/Container';
 import Control from 'react-bulma-companion/lib/Control';

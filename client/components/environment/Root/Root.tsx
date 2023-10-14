@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 import { History } from 'history';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import { HistoryRouter as Router } from 'redux-first-history/rr6';
 import { persistStore } from 'redux-persist';
+
+import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 
 import theme from '_client/styles/ts/theme';
 

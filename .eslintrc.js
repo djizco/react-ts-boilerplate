@@ -14,7 +14,9 @@ module.exports = {
     'import/order': [2, {
       'pathGroups': [
         { pattern: 'react', group: 'builtin', position: 'before' },
-        { pattern: '{@fortawesome/**,react-bulma-companion/**}', group: 'external', position: 'after' },
+        { pattern: '@mui/**', group: 'external', position: 'after' },
+        { pattern: '@fortawesome/**', group: 'external', position: 'after' },
+        { pattern: 'react-bulma-companion/**', group: 'external', position: 'after' },
         { pattern: '_client/**', group: 'internal', position: 'after' },
         { pattern: '_components/**', group: 'internal', position: 'after' },
         { pattern: '_store/**', group: 'internal', position: 'after' },
